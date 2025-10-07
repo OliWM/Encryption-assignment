@@ -1,6 +1,19 @@
 #include <stdio.h>
-#import <viginere.h>
+#include <string.h>
+#include <viginere.h>
 
-// if argv[2] == v
+void viginereEncrypt(char *wordToEncrypt, char *key) {
+  for (int i = 0; wordToEncrypt[i] != '\0'; i++) {
+    char ch = wordToEncrypt[i];
+    char chK = key[i % strlen(key)];
+    wordToEncrypt[i] = ((((ch - 'A') + (chK - 'A')) % 26) + 'A');
+  }
+}
 
-// evt. lave en + x hvis det er dekrypt eller + 0 hvis encrypt
+void viginereDecrypt(char *wordToDecrypt, char *Dkey) {
+  for (int i = 0; wordToDecrypt[i] != '\0'; i++) {
+    char ch = wordToDecrypt[i];
+    char chK = Dkey[i % strlen(Dkey)];
+    wordToDecrypt[i] = (((((ch - 'A') - (chK - 'A')) + 26) % 26) + 'A');
+  }
+}

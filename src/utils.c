@@ -1,6 +1,6 @@
 #include <ctype.h>
 #include <stdio.h>
-#import <utils.h>
+#include <utils.h>
 
 void cleanStrings(char *wordToBeCleaned) {
 

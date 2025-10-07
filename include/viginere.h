@@ -3,4 +3,6 @@
 
 void viginereEncrypt(char *wordToEncrypt, char *key);
 
+void viginereDecrypt(char *wordToDecrypt, char *Dkey);
+
 #endif

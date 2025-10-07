@@ -7,14 +7,19 @@
 #include <utils.h>
 #include <viginere.h>
 
+// No welcome message as nothing runs before we have our arguments and thus it
+// is too late to instruct how to use.
+
 int main(int argC, char **argV) {
-  // printUsage(argV[0]);
+
+  printUsage(argV[0]);
   for (int i = 0; i < argC; i++) {
     cleanStrings(argV[i]);
   }
   // caesarEncrypt(argV[3]);
   // caesarDecrypt(argV[3]);
-  viginereEncrypt(argV[3], argV[4]);
+  // viginereEncrypt(argV[3], argV[4]);
+  viginereDecrypt(argV[3], argV[4]);
   printf("%s", argV[3]);
 
   return 0;
