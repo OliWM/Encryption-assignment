@@ -12,14 +12,17 @@
 
 int main(int argC, char **argV) {
 
-  printUsage(argV[0]);
-  for (int i = 0; i < argC; i++) {
+  for (int i = 1; i < argC; i++) {
     cleanStrings(argV[i]);
-  }
-  // caesarEncrypt(argV[3]);
-  // caesarDecrypt(argV[3]);
-  // viginereEncrypt(argV[3], argV[4]);
-  viginereDecrypt(argV[3], argV[4]);
+  };
+
+  if (!checkIfValid(argC, argV[1], argV[2])) {
+    printUsage(argV[0]);
+    return 1; // returning 1 means an error happened
+  };
+
+  applyModeAndAlgo(argV[1], argV[2], argV[3], argV[4]);
+
   printf("%s", argV[3]);
 
   return 0;
