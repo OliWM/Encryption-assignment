@@ -10,7 +10,7 @@ void printUsage(const char *programmeName) {
          "Decrypt the input text");
   printf("Algorithms:\n\n    c, caesar  Caesar cipher\n    v, vigenere  "
          "Vigènere cipher");
-  printf("ONLY use letters and do NOT use space. The programme will only "
+  printf("Only use letters (A-Z) and do NOT use spaces in your message. The programme will only "
          "receive your message as one long word and if you use a space in your "
          "message everything after the space will not be included. Numbers and "
          "symbols will be deleted from message.");
