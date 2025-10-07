@@ -1,20 +1,18 @@
 /**
  * @file utils.h
- * @brief
+ * @brief utlity header file, currently just used to clean strings
  *
- * description here
+ * Cleans strings by making them all uppercase and removing any non-letters
  */
 
 #ifndef utils_h
 #define utils_h
 
 /**
- * @brief brief about this specific function
+ * @brief Turns strings uppercase, removes all non-letters
  *
- * description longer
  *
- * @param wordToBeCleaned Pointer to the string to be cleaned. The string is
- * modified in place.
+ * @param wordToBeCleaned Pointer to the string to be cleaned.
  */
 
 void cleanStrings(char *wordToBeCleaned);
